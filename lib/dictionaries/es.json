@@ -1,0 +1,154 @@
+{
+  "nav": {
+    "treatments": "Tratamientos",
+    "shop": "Tienda",
+    "giftCards": "Tarjetas regalo",
+    "maison": "La Maison",
+    "book": "Reservar",
+    "menu": "Menú",
+    "close": "Cerrar",
+    "cart": "Carrito",
+    "search": "Buscar",
+    "account": "Cuenta"
+  },
+  "announce": "Limpieza de oídos de cortesía con cada HydroFacial · Boca Ratón",
+  "hero": {
+    "eyebrow": "Piel · Glow · Ritual",
+    "title": "Tu Radiancia,\nRefinada",
+    "subtitle": "Faciales a medida, rituales corporales y skincare clínico — hechos a mano en Boca Ratón para dejarte radiante y rejuvenecida.",
+    "ctaBook": "Reservar un Tratamiento",
+    "ctaShop": "Descubre la Colección",
+    "card": "Cuidado Signature"
+  },
+  "bestsellers": {
+    "eyebrow": "Los más amados",
+    "title": "Más vendidos",
+    "subtitle": "Los favoritos que nuestras clientas vuelven a pedir una y otra vez."
+  },
+  "itsBack": {
+    "eyebrow": "Tiempo limitado",
+    "title": "Ha vuelto",
+    "p1": "Atemporal por naturaleza, siempre",
+    "p2": "Envuelto en un ritual cálido y dorado"
+  },
+  "popular": {
+    "eyebrow": "Seleccionado para ti",
+    "title": "Descubre tratamientos populares",
+    "all": "Todos",
+    "face": "Rostro",
+    "body": "Cuerpo",
+    "addons": "Extras"
+  },
+  "services": {
+    "eyebrow": "Servicios del salón",
+    "title": "Tratamientos, a mano",
+    "subtitle": "Tres pilares de cuidado — cada uno un ritual privado, reservable en segundos.",
+    "skincare": "Skincare",
+    "skincareDesc": "Faciales clínicos, peelings y HydroFacial para un glow visible.",
+    "facials": "Faciales Signature",
+    "facialsDesc": "Faciales a medida, orientados a resultados.",
+    "body": "Cuerpo & Glow",
+    "bodyDesc": "Esculpido, envolturas y rituales de acabado.",
+    "cta": "Explorar y reservar"
+  },
+  "gallery": {
+    "eyebrow": "La galería",
+    "title": "Un estudio del glow"
+  },
+  "reviews": {
+    "eyebrow": "Reseñas reales",
+    "title": "Adorado en Boca Ratón",
+    "ratingLabel": "valoración en Google",
+    "countLabel": "reseñas verificadas",
+    "cta": "Leer todas en Google",
+    "verified": "Verificado · Google"
+  },
+  "experience": {
+    "eyebrow": "La experiencia Arc",
+    "title": "Para ti, y solo para ti",
+    "subtitle": "Cada cita es un ritual privado — sin prisas, siempre adaptado a tu piel.",
+    "stats": {
+      "rating": "Valoración",
+      "reviews": "Reseñas Google",
+      "rebook": "Clientas que repiten",
+      "rituals": "Rituales signature"
+    },
+    "cta": "Comienza tu ritual"
+  },
+  "footer": {
+    "tagline": "Realza tu glow. Descubre tu belleza.",
+    "explore": "Explorar",
+    "visit": "Visítanos",
+    "connect": "Conecta",
+    "hours": "Horario",
+    "directions": "Cómo llegar",
+    "rights": "Todos los derechos reservados.",
+    "privacy": "Política de privacidad",
+    "terms": "Términos y condiciones"
+  },
+  "cart": {
+    "title": "Tu selección",
+    "empty": "Tu carrito está vacío.",
+    "emptyCta": "Explorar la tienda",
+    "subtotal": "Subtotal",
+    "checkout": "Ir al pago",
+    "remove": "Quitar",
+    "deposit": "depósito",
+    "note": "Impuestos calculados al pagar. Los depósitos de tratamientos se aplican a tu saldo final.",
+    "added": "Añadido a tu selección"
+  },
+  "product": {
+    "addToCart": "Añadir al carrito",
+    "sale": "Oferta",
+    "details": "Detalles",
+    "ingredients": "Ingredientes clave",
+    "related": "También te puede encantar",
+    "viewAll": "Ver todos los productos"
+  },
+  "treatment": {
+    "book": "Reservar este tratamiento",
+    "duration": "Duración",
+    "from": "Desde",
+    "viewAll": "Ver todos los tratamientos",
+    "includes": "Qué incluye",
+    "bookTitle": "Reserva tu cita",
+    "bookSubtitle": "Elige la hora que prefieras. Un pequeño depósito asegura tu cita y se aplica a tu saldo."
+  },
+  "giftCards": {
+    "eyebrow": "El regalo del glow",
+    "title": "Tarjetas regalo",
+    "subtitle": "Regala radiancia. Tarjetas digitales entregadas al instante, válidas en todos los tratamientos y productos.",
+    "choose": "Elige un importe",
+    "custom": "Importe personalizado",
+    "buy": "Comprar tarjeta regalo"
+  },
+  "booking": {
+    "unavailableTitle": "La reserva online se está preparando",
+    "unavailableBody": "Llámanos y nuestro equipo organizará el momento perfecto para tu ritual.",
+    "call": "Llamar para reservar"
+  },
+  "checkout": {
+    "title": "Pago",
+    "summary": "Resumen del pedido",
+    "pay": "Pagar de forma segura",
+    "unavailableTitle": "El pago seguro se está finalizando",
+    "unavailableBody": "Los pagos se activan en cuanto se conecte Stripe. Mientras tanto, reserva por teléfono y nos encargamos de todo.",
+    "back": "Volver a la tienda",
+    "emptyTitle": "Aún no hay nada aquí",
+    "emptyBody": "Añade un tratamiento o producto para empezar."
+  },
+  "maison": {
+    "eyebrow": "Boca Ratón",
+    "title": "La Maison",
+    "subtitle": "Un santuario silencioso para la piel en el corazón de Boca Ratón.",
+    "about": "The Arc Beauty Services nació de una idea sencilla: todas merecemos sentirnos seguras y radiantes. Cada ritual se realiza a mano, sin prisas y totalmente adaptado a ti. Entra y deja que devolvamos tu glow.",
+    "visitTitle": "Visítanos",
+    "visitBody": "Adoramos a nuestras clientas — reserva con antelación y prepararemos tu ritual privado.",
+    "formTitle": "Envíanos un mensaje",
+    "name": "Nombre",
+    "email": "Email",
+    "message": "Mensaje",
+    "send": "Enviar mensaje",
+    "sending": "Abriendo tu app de correo…"
+  }
+}

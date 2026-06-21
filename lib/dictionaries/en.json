@@ -1,0 +1,154 @@
+{
+  "nav": {
+    "treatments": "Treatments",
+    "shop": "Shop",
+    "giftCards": "Gift Cards",
+    "maison": "The Maison",
+    "book": "Book Now",
+    "menu": "Menu",
+    "close": "Close",
+    "cart": "Cart",
+    "search": "Search",
+    "account": "Account"
+  },
+  "announce": "Complimentary ear wax removal with every HydroFacial · Boca Raton",
+  "hero": {
+    "eyebrow": "Skin · Glow · Ritual",
+    "title": "Your Radiance,\nRefined",
+    "subtitle": "Bespoke facials, body rituals and clinical skincare — crafted by hand in Boca Raton to leave you radiant and rejuvenated.",
+    "ctaBook": "Book a Treatment",
+    "ctaShop": "Shop the Collection",
+    "card": "Signature Care"
+  },
+  "bestsellers": {
+    "eyebrow": "Most loved",
+    "title": "Bestsellers",
+    "subtitle": "The shelf favourites our clients reorder again and again."
+  },
+  "itsBack": {
+    "eyebrow": "Limited time only",
+    "title": "It's back",
+    "p1": "Timeless by nature, always",
+    "p2": "Wrapped in a warm, golden ritual"
+  },
+  "popular": {
+    "eyebrow": "Curated for you",
+    "title": "Discover popular treatments",
+    "all": "All",
+    "face": "Face",
+    "body": "Body",
+    "addons": "Add-ons"
+  },
+  "services": {
+    "eyebrow": "Salon services",
+    "title": "Treatments, by hand",
+    "subtitle": "Three pillars of care — each a private ritual, booked in moments.",
+    "skincare": "Skincare",
+    "skincareDesc": "Clinical facials, peels & HydroFacial for visible glow.",
+    "facials": "Signature Facials",
+    "facialsDesc": "Bespoke, results-driven facials tailored to your skin.",
+    "body": "Body & Glow",
+    "bodyDesc": "Sculpting, wraps and finishing rituals, head to toe.",
+    "cta": "Explore & book"
+  },
+  "gallery": {
+    "eyebrow": "The gallery",
+    "title": "A study in glow"
+  },
+  "reviews": {
+    "eyebrow": "Real reviews",
+    "title": "Loved in Boca Raton",
+    "ratingLabel": "rating on Google",
+    "countLabel": "verified reviews",
+    "cta": "Read all on Google",
+    "verified": "Verified · Google"
+  },
+  "experience": {
+    "eyebrow": "The Arc experience",
+    "title": "For you, and you only",
+    "subtitle": "Every appointment is a private ritual — never rushed, always tailored to your skin.",
+    "stats": {
+      "rating": "Star rating",
+      "reviews": "Google reviews",
+      "rebook": "Clients who rebook",
+      "rituals": "Signature rituals"
+    },
+    "cta": "Begin your ritual"
+  },
+  "footer": {
+    "tagline": "Enhance your glow. Discover your beauty.",
+    "explore": "Explore",
+    "visit": "Visit",
+    "connect": "Connect",
+    "hours": "Hours",
+    "directions": "Get directions",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions"
+  },
+  "cart": {
+    "title": "Your selection",
+    "empty": "Your cart is empty.",
+    "emptyCta": "Explore the shop",
+    "subtotal": "Subtotal",
+    "checkout": "Proceed to checkout",
+    "remove": "Remove",
+    "deposit": "deposit",
+    "note": "Taxes calculated at checkout. Treatment deposits are applied to your final balance.",
+    "added": "Added to your selection"
+  },
+  "product": {
+    "addToCart": "Add to cart",
+    "sale": "Sale",
+    "details": "Details",
+    "ingredients": "Key ingredients",
+    "related": "You may also love",
+    "viewAll": "View all products"
+  },
+  "treatment": {
+    "book": "Book this treatment",
+    "duration": "Duration",
+    "from": "From",
+    "viewAll": "View all treatments",
+    "includes": "What's included",
+    "bookTitle": "Reserve your appointment",
+    "bookSubtitle": "Choose a time that suits you. A small deposit secures your slot and is applied to your balance."
+  },
+  "giftCards": {
+    "eyebrow": "The gift of glow",
+    "title": "Gift Cards",
+    "subtitle": "Give radiance. Digital gift cards delivered instantly, redeemable on every treatment and product.",
+    "choose": "Choose an amount",
+    "custom": "Custom amount",
+    "buy": "Purchase gift card"
+  },
+  "booking": {
+    "unavailableTitle": "Online booking is being prepared",
+    "unavailableBody": "Call us and our team will arrange the perfect time for your ritual.",
+    "call": "Call to book"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "summary": "Order summary",
+    "pay": "Pay securely",
+    "unavailableTitle": "Secure checkout is being finalised",
+    "unavailableBody": "Payments go live once Stripe is connected. Until then, reserve by phone and we'll take care of the rest.",
+    "back": "Back to shop",
+    "emptyTitle": "Nothing here yet",
+    "emptyBody": "Add a treatment or product to begin."
+  },
+  "maison": {
+    "eyebrow": "Boca Raton",
+    "title": "The Maison",
+    "subtitle": "A quiet sanctuary for skin in the heart of Boca Raton.",
+    "about": "The Arc Beauty Services was founded on a simple belief — that everyone deserves to feel confident and radiant. Every ritual is performed by hand, never rushed, and tailored entirely to you. Step inside and let us restore your glow.",
+    "visitTitle": "Visit us",
+    "visitBody": "We love our clients — book ahead and let us prepare your private ritual.",
+    "formTitle": "Send a note",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send a note",
+    "sending": "Opening your mail app…"
+  }
+}
