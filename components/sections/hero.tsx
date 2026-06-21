@@ -1,136 +1,85 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
-import { ButtonLink } from "@/components/ui/button";
-import { HeroSlideshow } from "./hero-slideshow";
-import { Stars } from "@/components/ui/stars";
-import { getTreatment, getRatingSummary } from "@/lib/data";
-import { HERO_SLIDES, productImage } from "@/lib/images";
-import { loc } from "@/lib/utils";
+import {
+  HERO_FULL,
+  productImage,
+  treatmentImage,
+  MAISON_IMAGE,
+} from "@/lib/images";
 import type { Dictionary, Locale } from "@/lib/i18n";
-
-function RatingChip({
-  rating,
-  total,
-  label,
-}: {
-  rating: number;
-  total: number;
-  label: string;
-}) {
-  return (
-    <div className="glass flex items-center gap-3 rounded-pill px-4 py-2.5">
-      <span className="font-display text-2xl leading-none text-obsidian">
-        {rating.toFixed(1)}
-      </span>
-      <span className="block">
-        <Stars rating={5} size={11} />
-        <span className="mt-0.5 block text-[0.62rem] uppercase tracking-[0.14em] text-stone">
-          {total} {label}
-        </span>
-      </span>
-    </div>
-  );
-}
 
 export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const h = dict.hero;
-  const s = dict.services;
-  const pkg = getTreatment("rg-24-glow-package-1");
-  const rating = getRatingSummary();
-  const pills = [s.facials, s.skincare, s.body];
+
+  const cards = [
+    { label: h.cardShop, desc: h.cardShopDesc, href: `/${locale}/shop`, src: productImage("peppermint-toner-organic")! },
+    { label: h.cardTreatments, desc: h.cardTreatmentsDesc, href: `/${locale}/treatments`, src: treatmentImage("signature-facial")! },
+    { label: h.cardGift, desc: h.cardGiftDesc, href: `/${locale}/gift-cards`, src: productImage("petalisse-body-oil")! },
+    { label: h.cardMaison, desc: h.cardMaisonDesc, href: `/${locale}/maison`, src: MAISON_IMAGE },
+  ];
 
   return (
-    <section className="relative isolate overflow-hidden bg-gradient-to-br from-cream via-cream to-silk/60">
-      <div className="halo-gold pointer-events-none absolute -top-40 left-1/4 h-[50rem] w-[50rem]" />
+    <section className="relative -mt-16 min-h-[100svh] w-full overflow-hidden">
+      {/* full-bleed Full-HD image */}
+      <Image
+        src={HERO_FULL}
+        alt="The Arc Beauty — radiant, glowing skin"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-[62%_center]"
+      />
 
-      {/* desktop full-bleed slideshow (right half) */}
-      <div className="absolute inset-y-0 right-0 hidden lg:block lg:w-1/2 xl:w-[52%]">
-        <HeroSlideshow
-          slides={HERO_SLIDES}
-          alt="The Arc Beauty — radiant, glowing skin"
-          sizes="52vw"
-          priority
-          className="h-full w-full"
-        />
-        {/* thin edge blend into cream (no gray tint over the image) */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-cream to-transparent" />
-      </div>
+      {/* legibility scrims */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#3a281a]/85 via-[#3a281a]/35 to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-36 bg-gradient-to-b from-[#251a0f]/55 to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 h-80 bg-gradient-to-t from-[#221710]/75 via-[#221710]/20 to-transparent" />
 
-      <div className="absolute right-6 top-24 z-10 hidden lg:block xl:right-12">
-        <RatingChip rating={rating.rating} total={rating.total} label={dict.reviews.countLabel} />
-      </div>
+      <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-[100rem] flex-col px-6 pb-6 pt-24 sm:px-8 lg:px-12 lg:pb-10 lg:pt-28">
+        {/* headline */}
+        <div className="mt-[9vh] max-w-xl lg:mt-[15vh]">
+          <h1 className="font-display whitespace-pre-line text-[clamp(2.9rem,6.6vw,5.8rem)] font-medium leading-[0.98] text-cream [text-shadow:0_2px_40px_rgba(20,12,6,0.45)]">
+            {h.title}
+          </h1>
+          <p className="mt-6 max-w-sm text-base leading-relaxed text-cream/85 sm:text-lg">
+            {h.subtitle}
+          </p>
+          <Link
+            href={`/${locale}/shop`}
+            className="mt-8 inline-flex items-center justify-center rounded-lg bg-cream px-8 py-4 text-xs font-semibold uppercase tracking-[0.18em] text-obsidian shadow-[0_18px_40px_-18px_rgba(20,12,6,0.6)] transition-[transform,background-color] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-white active:scale-[0.98]"
+          >
+            {h.cta}
+          </Link>
+        </div>
 
-      <div className="relative mx-auto max-w-[88rem] px-5 lg:px-8">
-        <div className="grid items-center lg:min-h-[88vh] lg:grid-cols-2 lg:gap-12">
-          {/* mobile / tablet slideshow */}
-          <div className="relative mt-4 aspect-[4/5] overflow-hidden rounded-card shadow-soft sm:aspect-[16/10] lg:hidden">
-            <HeroSlideshow
-              slides={HERO_SLIDES}
-              alt="The Arc Beauty — radiant, glowing skin"
-              sizes="100vw"
-              priority
-              className="h-full w-full"
-            />
-            <div className="absolute right-4 top-4 z-20">
-              <RatingChip rating={rating.rating} total={rating.total} label={dict.reviews.countLabel} />
-            </div>
-          </div>
+        <div className="flex-1" />
 
-          {/* text */}
-          <div className="stagger py-12 lg:py-24">
-            <div className="flex flex-wrap gap-2">
-              {pills.map((p) => (
-                <span
-                  key={p}
-                  className="rounded-pill bg-silk/70 px-4 py-1.5 text-[0.7rem] uppercase tracking-[0.16em] text-obsidian/80 ring-1 ring-inset ring-line"
-                >
-                  {p}
-                </span>
-              ))}
-            </div>
-
-            <h1 className="font-display mt-6 whitespace-pre-line text-6xl leading-[0.95] sm:text-7xl lg:text-[5.2rem] xl:text-[6rem]">
-              {h.title}
-            </h1>
-            <p className="mt-6 max-w-md text-lg leading-relaxed text-stone">{h.subtitle}</p>
-
-            <div className="mt-8 flex flex-wrap items-center gap-3">
-              <ButtonLink href={`/${locale}/book`} size="lg">
-                {h.ctaBook}
-              </ButtonLink>
-              <ButtonLink href={`/${locale}/shop`} variant="gold" size="lg">
-                {h.ctaShop}
-              </ButtonLink>
-            </div>
-
-            {pkg && (
-              <Link
-                href={`/${locale}/treatments/${pkg.slug}`}
-                className="group mt-10 inline-flex items-center gap-4 rounded-card glass p-2.5 pr-5 transition-transform duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-0.5"
-              >
-                <span className="relative block h-16 w-16 shrink-0 overflow-hidden rounded-2xl">
-                  <Image
-                    src={productImage("skin-stem-cell-plus-serum")!}
-                    alt={loc(pkg.name, locale)}
-                    fill
-                    sizes="64px"
-                    className="object-cover"
+        {/* quick navigation cards */}
+        <div className="grid grid-cols-2 gap-2.5 sm:gap-3 lg:grid-cols-4 lg:gap-4">
+          {cards.map((c) => (
+            <Link
+              key={c.label}
+              href={c.href}
+              className="group flex items-center gap-3 rounded-2xl bg-cream/80 p-2.5 ring-1 ring-white/40 backdrop-blur-md transition-[background-color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-0.5 hover:bg-cream lg:gap-4 lg:p-3.5"
+            >
+              <span className="relative h-12 w-12 shrink-0 overflow-hidden rounded-xl lg:h-[4.5rem] lg:w-[4.5rem]">
+                <Image src={c.src} alt="" fill sizes="80px" className="object-cover" />
+              </span>
+              <span className="min-w-0 flex-1">
+                <span className="flex items-center gap-1.5 text-[0.8rem] font-semibold uppercase tracking-[0.06em] text-obsidian lg:text-sm lg:tracking-[0.08em]">
+                  {c.label}
+                  <ArrowUpRight
+                    size={13}
+                    className="hidden text-gold-ink opacity-0 transition-opacity duration-300 group-hover:opacity-100 lg:inline"
                   />
                 </span>
-                <span className="text-left">
-                  <span className="eyebrow text-gold-ink">{h.card}</span>
-                  <span className="font-display mt-0.5 block text-lg leading-tight text-obsidian">
-                    {loc(pkg.name, locale)}
-                  </span>
+                <span className="mt-0.5 block text-xs leading-tight text-stone lg:text-sm">
+                  {c.desc}
                 </span>
-                <ArrowUpRight
-                  size={18}
-                  className="text-stone transition-transform duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-gold-ink"
-                />
-              </Link>
-            )}
-          </div>
+              </span>
+            </Link>
+          ))}
         </div>
       </div>
     </section>

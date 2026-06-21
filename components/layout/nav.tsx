@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { AnimatePresence, motion } from "motion/react";
 import { Search, ShoppingBag, Phone, MapPin, ArrowUpRight } from "lucide-react";
@@ -46,6 +47,10 @@ export function Nav({
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const settings = getSettings();
+  const pathname = usePathname();
+  const isHome = pathname === `/${locale}` || pathname === `/${locale}/`;
+  // Light nav over the full-bleed home hero (until scrolled).
+  const onDark = isHome && !scrolled && !menuOpen;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -82,19 +87,30 @@ export function Nav({
           {/* left */}
           <div className="flex items-center">
             <button
-              className="grid h-10 w-10 place-items-center text-obsidian transition-colors hover:text-gold-ink lg:hidden"
+              className={cn(
+                "grid h-10 w-10 place-items-center transition-colors lg:hidden",
+                onDark ? "text-cream hover:text-cream/70" : "text-obsidian hover:text-gold-ink",
+              )}
               onClick={() => setMenuOpen((v) => !v)}
               aria-label={menuOpen ? dict.nav.close : dict.nav.menu}
               aria-expanded={menuOpen}
             >
               <MenuToggle open={menuOpen} />
             </button>
-            <ul className="hidden items-center gap-7 text-[0.7rem] uppercase tracking-[0.16em] text-stone lg:flex">
+            <ul
+              className={cn(
+                "hidden items-center gap-7 text-[0.7rem] uppercase tracking-[0.16em] transition-colors lg:flex",
+                onDark ? "text-cream/85" : "text-stone",
+              )}
+            >
               {links.map((l) => (
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="link-underline pb-0.5 transition-colors duration-200 hover:text-obsidian"
+                    className={cn(
+                      "link-underline pb-0.5 transition-colors duration-200",
+                      onDark ? "hover:text-cream" : "hover:text-obsidian",
+                    )}
                   >
                     {l.label}
                   </Link>
@@ -105,7 +121,7 @@ export function Nav({
 
           {/* center */}
           <div className="flex justify-center">
-            <Logo locale={locale} />
+            <Logo locale={locale} light={onDark} />
           </div>
 
           {/* right */}
@@ -115,17 +131,23 @@ export function Nav({
               menuOpen && "max-lg:pointer-events-none max-lg:opacity-0",
             )}
           >
-            <LocaleSwitch locale={locale} className="hidden sm:flex" />
+            <LocaleSwitch locale={locale} light={onDark} className="hidden sm:flex" />
             <button
               aria-label={dict.nav.search}
-              className="hidden h-10 w-10 place-items-center text-stone transition-colors hover:text-gold-ink sm:grid"
+              className={cn(
+                "hidden h-10 w-10 place-items-center transition-colors sm:grid",
+                onDark ? "text-cream/85 hover:text-cream" : "text-stone hover:text-gold-ink",
+              )}
             >
               <Search size={18} />
             </button>
             <button
               onClick={() => setCartOpen(true)}
               aria-label={`${dict.nav.cart} (${count})`}
-              className="relative grid h-10 w-10 place-items-center text-obsidian transition-colors hover:text-gold-ink"
+              className={cn(
+                "relative grid h-10 w-10 place-items-center transition-colors",
+                onDark ? "text-cream hover:text-cream/70" : "text-obsidian hover:text-gold-ink",
+              )}
             >
               <ShoppingBag size={18} />
               {count > 0 && (
@@ -134,7 +156,12 @@ export function Nav({
                 </span>
               )}
             </button>
-            <ButtonLink href={`/${locale}/book`} size="sm" className="hidden lg:inline-flex">
+            <ButtonLink
+              href={`/${locale}/book`}
+              size="sm"
+              variant={onDark ? "soft" : "primary"}
+              className="hidden lg:inline-flex"
+            >
               {dict.nav.book}
             </ButtonLink>
           </div>

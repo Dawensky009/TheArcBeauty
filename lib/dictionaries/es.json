@@ -13,12 +13,17 @@
   },
   "announce": "Limpieza de oídos de cortesía con cada HydroFacial · Boca Ratón",
   "hero": {
-    "eyebrow": "Piel · Glow · Ritual",
-    "title": "Tu Radiancia,\nRefinada",
-    "subtitle": "Faciales a medida, rituales corporales y skincare clínico — hechos a mano en Boca Ratón para dejarte radiante y rejuvenecida.",
-    "ctaBook": "Reservar un Tratamiento",
-    "ctaShop": "Descubre la Colección",
-    "card": "Cuidado Signature"
+    "title": "Un ritual de calma\npara tu piel",
+    "subtitle": "Faciales a medida y skincare clínico, hechos a mano en Boca Ratón.",
+    "cta": "Descubre la Colección",
+    "cardShop": "Tienda",
+    "cardShopDesc": "Esenciales selectos",
+    "cardTreatments": "Tratamientos",
+    "cardTreatmentsDesc": "Faciales y rituales",
+    "cardGift": "Tarjetas regalo",
+    "cardGiftDesc": "El regalo del glow",
+    "cardMaison": "La Maison",
+    "cardMaisonDesc": "Visítanos"
   },
   "bestsellers": {
     "eyebrow": "Los más amados",

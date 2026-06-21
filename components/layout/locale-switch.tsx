@@ -8,9 +8,11 @@ import { cn } from "@/lib/utils";
 export function LocaleSwitch({
   locale,
   className,
+  light = false,
 }: {
   locale: Locale;
   className?: string;
+  light?: boolean;
 }) {
   const pathname = usePathname() || `/${locale}`;
 
@@ -20,13 +22,19 @@ export function LocaleSwitch({
         const swapped = pathname.replace(/^\/(en|es)/, `/${l}`);
         return (
           <span key={l} className="flex items-center gap-1.5">
-            {i > 0 && <span className="text-stone-light">·</span>}
+            {i > 0 && <span className={light ? "text-cream/40" : "text-stone-light"}>·</span>}
             <Link
               href={swapped}
               hrefLang={l}
               className={cn(
                 "uppercase transition-colors duration-200",
-                l === locale ? "text-gold-ink" : "text-stone hover:text-obsidian",
+                l === locale
+                  ? light
+                    ? "text-gold-bright"
+                    : "text-gold-ink"
+                  : light
+                    ? "text-cream/70 hover:text-cream"
+                    : "text-stone hover:text-obsidian",
               )}
               aria-current={l === locale ? "true" : undefined}
             >

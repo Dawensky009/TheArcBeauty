@@ -13,12 +13,17 @@
   },
   "announce": "Complimentary ear wax removal with every HydroFacial · Boca Raton",
   "hero": {
-    "eyebrow": "Skin · Glow · Ritual",
-    "title": "Your Radiance,\nRefined",
-    "subtitle": "Bespoke facials, body rituals and clinical skincare — crafted by hand in Boca Raton to leave you radiant and rejuvenated.",
-    "ctaBook": "Book a Treatment",
-    "ctaShop": "Shop the Collection",
-    "card": "Signature Care"
+    "title": "A calm ritual\nfor your skin",
+    "subtitle": "Bespoke facials and clinical skincare, crafted by hand in Boca Raton.",
+    "cta": "Discover the Collection",
+    "cardShop": "Shop",
+    "cardShopDesc": "Curated essentials",
+    "cardTreatments": "Treatments",
+    "cardTreatmentsDesc": "Facials & rituals",
+    "cardGift": "Gift Cards",
+    "cardGiftDesc": "The gift of glow",
+    "cardMaison": "The Maison",
+    "cardMaisonDesc": "Visit us"
   },
   "bestsellers": {
     "eyebrow": "Most loved",

@@ -7,6 +7,9 @@ function img(id: string, w = 1200): string {
   return `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
 }
 
+// Hero — full-bleed editorial image (Full HD)
+export const HERO_FULL = img("1699206791200-414d95e68450", 1920);
+
 // Hero — vivid, full-colour beauty slideshow (saturation-picked)
 export const HERO_SLIDES: string[] = [
   img("1624819318229-f006595a4993", 1400), // bronzed glow close-up
