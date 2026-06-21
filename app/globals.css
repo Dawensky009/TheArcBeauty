@@ -46,7 +46,7 @@
 }
 
 @theme inline {
-  --font-display: var(--font-cormorant);
+  --font-display: var(--font-fraunces);
   --font-body: var(--font-hanken);
 }
 
@@ -82,13 +82,15 @@ body {
   font-family: var(--font-display), Georgia, serif;
   font-weight: 500;
   letter-spacing: -0.01em;
+  font-optical-sizing: auto;
 }
 
 h1, h2, h3 {
   font-family: var(--font-display), Georgia, serif;
   font-weight: 500;
-  line-height: 0.98;
-  letter-spacing: -0.015em;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  font-optical-sizing: auto;
 }
 
 /* Eyebrow / label utility */
