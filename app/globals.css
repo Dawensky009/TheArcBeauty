@@ -7,28 +7,29 @@
    ============================================================ */
 
 @theme {
-  /* — Cream / silk backgrounds — */
-  --color-cream: #f7f3ec;
-  --color-cream-deep: #f1e9dc;
-  --color-ivory: #fcfaf5;
-  --color-silk: #efe7db;
-  --color-silk-deep: #e6dccb;
-  --color-sand: #dccab3;
+  /* — Warm beige / almond backgrounds — */
+  --color-cream: #fcf3e7;
+  --color-cream-deep: #fae2c8;   /* Beige Radiance */
+  --color-ivory: #fffaf2;
+  --color-silk: #f4ddc1;
+  --color-silk-deep: #ecd1b2;
+  --color-sand: #d6a276;         /* Rich Almond */
 
-  /* — Obsidian / stone text — */
-  --color-obsidian: #1a1512;
-  --color-stone: #6b6259;
-  --color-stone-light: #8c8378;
+  /* — Espresso / taupe text — */
+  --color-obsidian: #2c1b10;     /* deep espresso (warm high-contrast) */
+  --color-stone: #7c5b40;        /* warm taupe (muted) */
+  --color-stone-light: #a07d5e;  /* warm dim */
 
-  /* — Soft gold — */
-  --color-gold: #c0a062;        /* decorative: stars, lines, glow, hover */
-  --color-gold-ink: #8a6b33;    /* legible gold text: eyebrows, prices */
-  --color-gold-bright: #d4b878; /* hover sheen */
-  --color-gold-soft: #e7d7b5;   /* tints / fills / selection */
+  /* — Bronze & gold — */
+  --color-gold: #c97e3c;         /* Gilded Bronze — decorative accent */
+  --color-gold-ink: #9a5a28;     /* deep bronze — legible gold text */
+  --color-gold-bright: #f3c17d;  /* Lustrous Gold — hover / sheen */
+  --color-gold-soft: #fae2c8;    /* Beige Radiance — tints / fills */
+  --color-cocoa: #ba4e36;        /* Deep Cocoa — rich deep accent */
 
   /* — Lines / surfaces — */
-  --color-line: rgba(26, 21, 18, 0.1);
-  --color-line-strong: rgba(26, 21, 18, 0.16);
+  --color-line: rgba(44, 27, 16, 0.12);
+  --color-line-strong: rgba(44, 27, 16, 0.18);
 
   /* — Radii (template = very rounded) — */
   --radius-pill: 999px;
@@ -36,7 +37,7 @@
   --radius-xl2: 2rem;
 
   /* — Soft shadows (light-mode depth) — */
-  --shadow-soft: 0 24px 60px -34px rgba(26, 21, 18, 0.3);
+  --shadow-soft: 0 24px 60px -34px rgba(44, 27, 16, 0.3);
 
   /* — Easings (Emil Kowalski) — */
   --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
@@ -124,8 +125,8 @@ body::before {
 .halo-gold {
   background: radial-gradient(
     60% 60% at 50% 40%,
-    rgba(192, 160, 98, 0.18) 0%,
-    rgba(192, 160, 98, 0.06) 40%,
+    rgba(201, 126, 60, 0.22) 0%,
+    rgba(201, 126, 60, 0.07) 40%,
     transparent 72%
   );
 }

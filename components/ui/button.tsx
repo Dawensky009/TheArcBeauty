@@ -6,7 +6,7 @@ type Variant = "primary" | "soft" | "outline" | "gold" | "ghost";
 type Size = "sm" | "md" | "lg";
 
 const VARIANTS: Record<Variant, string> = {
-  primary: "bg-obsidian text-cream hover:bg-[#2a221c] shadow-soft",
+  primary: "bg-obsidian text-cream hover:bg-[#41281a] shadow-soft",
   soft: "bg-silk text-obsidian ring-1 ring-inset ring-line hover:ring-gold/50",
   outline:
     "text-obsidian ring-1 ring-inset ring-obsidian/25 hover:bg-obsidian hover:text-cream",

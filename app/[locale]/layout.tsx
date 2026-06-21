@@ -101,11 +101,11 @@ export default async function LocaleLayout({
           offset={16}
           toastOptions={{
             style: {
-              background: "#fcfaf5",
-              border: "1px solid rgba(138,107,51,0.28)",
-              color: "#1a1512",
+              background: "#fffaf2",
+              border: "1px solid rgba(154,90,40,0.30)",
+              color: "#2c1b10",
               borderRadius: "14px",
-              boxShadow: "0 24px 60px -34px rgba(26,21,18,0.3)",
+              boxShadow: "0 24px 60px -34px rgba(44,27,16,0.3)",
             },
           }}
         />
