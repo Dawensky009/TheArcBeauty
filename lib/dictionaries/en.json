@@ -13,6 +13,7 @@
   },
   "announce": "Complimentary ear wax removal with every HydroFacial · Boca Raton",
   "hero": {
+    "eyebrow": "Boca Raton, Florida",
     "title": "A calm ritual\nfor your skin",
     "subtitle": "Bespoke facials and clinical skincare, crafted by hand in Boca Raton.",
     "cta": "Discover the Collection",
@@ -80,6 +81,15 @@
     },
     "cta": "Begin your ritual"
   },
+  "founder": {
+    "eyebrow": "Meet the founder",
+    "name": "Patricia",
+    "role": "Founder & Lead Esthetician",
+    "p1": "Patricia founded The Arc Beauty Services on a single belief: that caring for your skin is a form of self-respect — and everyone deserves to feel it.",
+    "p2": "A licensed esthetician with years of hands-on experience, she built The Arc to be the place she always wished existed — unhurried, deeply personal, and devoted to real results. Every ritual on the menu carries her signature touch.",
+    "quote": "Your glow is my craft.",
+    "cta": "Book with Patricia"
+  },
   "footer": {
     "tagline": "Enhance your glow. Discover your beauty.",
     "explore": "Explore",
@@ -137,7 +147,7 @@
     "summary": "Order summary",
     "pay": "Pay securely",
     "unavailableTitle": "Secure checkout is being finalised",
-    "unavailableBody": "Payments go live once Stripe is connected. Until then, reserve by phone and we'll take care of the rest.",
+    "unavailableBody": "Payments go live once Square is connected. Until then, reserve by phone and we'll take care of the rest.",
     "back": "Back to shop",
     "emptyTitle": "Nothing here yet",
     "emptyBody": "Add a treatment or product to begin."

@@ -5,8 +5,8 @@ A bespoke, light editorial e-commerce & salon-booking website for **The Arc Beau
 ## Highlights
 
 - **Cinematic hero slideshow** — vivid, full-colour beauty imagery, crossfade + Ken-Burns, autoplay, arrows & dots.
-- **E-commerce** — product grid with hover-to-zoom and glassmorphism "Key Ingredients" panels, cart drawer, checkout (Stripe-ready).
-- **Salon services & booking** — services showcase, treatment pages with an inline booking flow (Cal.com-ready, graceful concierge fallback).
+- **E-commerce** — product grid with hover-to-zoom and glassmorphism "Key Ingredients" panels, cart drawer, checkout (Square-ready).
+- **Salon services & booking** — services showcase, treatment pages with an inline booking flow (Square Appointments-ready, graceful concierge fallback).
 - **Bespoke Google Reviews** — elegant 5★ social proof (no generic widget).
 - **Bilingual** — English / Spanish (`/en`, `/es`) with locale routing.
 - **Fully responsive** — phone, tablet & desktop; swipe carousels and adaptive layouts on mobile.
@@ -17,7 +17,7 @@ A bespoke, light editorial e-commerce & salon-booking website for **The Arc Beau
 - **Next.js 16** (App Router, RSC) · **React 19** · **TypeScript**
 - **Tailwind CSS v4** (design tokens via `@theme`)
 - **Motion** (animation) · **Lenis** (smooth scroll) · **Vaul** (drawer) · **Sonner** (toasts) · **Lucide** (icons)
-- **Stripe** (commerce, ready to wire) · imagery placeholders via Unsplash CDN
+- **Square** (payments + Appointments booking, ready to wire) · imagery placeholders via Unsplash CDN
 
 ## Getting started
 
@@ -36,8 +36,8 @@ Copy `.env.example` to `.env.local` and fill in as services are connected:
 | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | Canonical site URL (metadata, redirects) |
 | `NEXT_PUBLIC_HERO_VIDEO` | Optional MP4 for a video hero |
-| `NEXT_PUBLIC_CALCOM_LINK` | Cal.com username/event for live booking |
-| `STRIPE_SECRET_KEY` / `NEXT_PUBLIC_STRIPE_*` | Payments & checkout |
+| `NEXT_PUBLIC_SQUARE_BOOKING_URL` | Square Appointments booking site (embedded) |
+| `SQUARE_ACCESS_TOKEN` / `SQUARE_LOCATION_ID` / `SQUARE_ENVIRONMENT` | Payments & checkout (Square Online Checkout) |
 | `GOOGLE_PLACES_API_KEY` | Live Google rating / reviews |
 
 The app runs fully without any keys — booking, checkout and reviews show graceful, on-brand fallbacks.

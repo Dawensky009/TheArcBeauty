@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Hanken_Grotesk } from "next/font/google";
+import { Schibsted_Grotesk } from "next/font/google";
 import { notFound } from "next/navigation";
 import { Toaster } from "sonner";
 import "../globals.css";
@@ -14,18 +14,10 @@ import { Footer } from "@/components/layout/footer";
 import { AnnouncementBar } from "@/components/layout/announcement-bar";
 import { CartDrawer } from "@/components/commerce/cart-drawer";
 
-const fraunces = Fraunces({
+const schibsted = Schibsted_Grotesk({
   subsets: ["latin"],
-  style: ["normal", "italic"],
-  axes: ["SOFT", "opsz"],
-  variable: "--font-fraunces",
-  display: "swap",
-});
-
-const hanken = Hanken_Grotesk({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-hanken",
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-schibsted",
   display: "swap",
 });
 
@@ -85,7 +77,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       data-scroll-behavior="smooth"
-      className={`${fraunces.variable} ${hanken.variable} h-full antialiased`}
+      className={`${schibsted.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
         <SmoothScroll />

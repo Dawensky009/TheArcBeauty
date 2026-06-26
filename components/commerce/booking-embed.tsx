@@ -3,9 +3,14 @@ import { getSettings } from "@/lib/data";
 import type { Dictionary } from "@/lib/i18n";
 
 /**
- * Real-time booking. When NEXT_PUBLIC_CALCOM_LINK is configured, embeds the
- * white-labelled Cal.com scheduler (dark theme). Until then, shows a refined
- * concierge fallback so the page is always functional.
+ * Booking — Square Appointments. When NEXT_PUBLIC_SQUARE_BOOKING_URL is set,
+ * embeds the salon's published Square booking site. Until then, shows a
+ * refined concierge fallback so the page is always functional.
+ *
+ * The URL comes from Square Dashboard → Appointments → online booking site
+ * ("copy link"). If the client's Square plan blocks iframing (X-Frame-Options),
+ * swap this iframe for Square's official embed snippet (script-based widget).
+ * `treatmentSlug` is reserved for future per-service deep-linking.
  */
 export function BookingEmbed({
   dict,
@@ -14,17 +19,19 @@ export function BookingEmbed({
   dict: Dictionary;
   treatmentSlug?: string;
 }) {
-  const cal = process.env.NEXT_PUBLIC_CALCOM_LINK;
+  const bookingUrl = process.env.NEXT_PUBLIC_SQUARE_BOOKING_URL;
   const settings = getSettings();
 
-  if (cal) {
-    const event = treatmentSlug ? `${cal}/${treatmentSlug}` : cal;
-    const src = `https://cal.com/${event}?theme=dark&hideEventTypeDetails=false&layout=month_view`;
+  if (bookingUrl) {
     return (
       <div className="overflow-hidden rounded-card border border-line bg-cream">
         <iframe
-          src={src}
-          title={dict.treatment.bookTitle}
+          src={bookingUrl}
+          title={
+            treatmentSlug
+              ? `${dict.treatment.bookTitle} — ${treatmentSlug}`
+              : dict.treatment.bookTitle
+          }
           className="h-[44rem] w-full"
           loading="lazy"
         />

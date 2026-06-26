@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { AnimatePresence, motion } from "motion/react";
-import { Search, ShoppingBag, Phone, MapPin, ArrowUpRight } from "lucide-react";
+import { ShoppingBag, Phone, MapPin, ArrowUpRight } from "lucide-react";
 import { useCart } from "@/components/providers/cart";
 import { Logo } from "@/components/ui/logo";
 import { LocaleSwitch } from "./locale-switch";
@@ -69,7 +69,6 @@ export function Nav({
   const links = [
     { href: `/${locale}/treatments`, label: dict.nav.treatments },
     { href: `/${locale}/shop`, label: dict.nav.shop },
-    { href: `/${locale}/gift-cards`, label: dict.nav.giftCards },
     { href: `/${locale}/maison`, label: dict.nav.maison },
   ];
 
@@ -132,15 +131,17 @@ export function Nav({
             )}
           >
             <LocaleSwitch locale={locale} light={onDark} className="hidden sm:flex" />
-            <button
-              aria-label={dict.nav.search}
+            <a
+              href={phoneHref}
+              aria-label={`${dict.nav.book} · ${settings.phone}`}
+              title={settings.phone}
               className={cn(
-                "hidden h-10 w-10 place-items-center transition-colors sm:grid",
+                "grid h-10 w-10 place-items-center transition-colors",
                 onDark ? "text-cream/85 hover:text-cream" : "text-stone hover:text-gold-ink",
               )}
             >
-              <Search size={18} />
-            </button>
+              <Phone size={17} />
+            </a>
             <button
               onClick={() => setCartOpen(true)}
               aria-label={`${dict.nav.cart} (${count})`}
@@ -158,7 +159,7 @@ export function Nav({
             </button>
             <ButtonLink
               href={`/${locale}/book`}
-              size="sm"
+              size="md"
               variant={onDark ? "soft" : "primary"}
               className="hidden lg:inline-flex"
             >

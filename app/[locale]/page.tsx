@@ -9,6 +9,7 @@ import { ItsBack } from "@/components/sections/its-back";
 import { Gallery } from "@/components/sections/gallery";
 import { Reviews } from "@/components/sections/reviews";
 import { Experience } from "@/components/sections/experience";
+import { Founder } from "@/components/sections/founder";
 
 export default async function HomePage({
   params,
@@ -28,6 +29,7 @@ export default async function HomePage({
       <PopularTreatments locale={l} dict={dict} treatments={getTreatments()} />
       <ItsBack locale={l} dict={dict} />
       <Gallery locale={l} dict={dict} />
+      <Founder locale={l} dict={dict} />
       <Reviews locale={l} dict={dict} />
       <Experience locale={l} dict={dict} />
     </>

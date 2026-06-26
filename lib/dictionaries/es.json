@@ -13,6 +13,7 @@
   },
   "announce": "Limpieza de oídos de cortesía con cada HydroFacial · Boca Ratón",
   "hero": {
+    "eyebrow": "Boca Ratón, Florida",
     "title": "Un ritual de calma\npara tu piel",
     "subtitle": "Faciales a medida y skincare clínico, hechos a mano en Boca Ratón.",
     "cta": "Descubre la Colección",
@@ -80,6 +81,15 @@
     },
     "cta": "Comienza tu ritual"
   },
+  "founder": {
+    "eyebrow": "Conoce a la fundadora",
+    "name": "Patricia",
+    "role": "Fundadora y Esteticista Principal",
+    "p1": "Patricia fundó The Arc Beauty Services sobre una idea: cuidar tu piel es una forma de respeto propio, y todas merecen sentirlo.",
+    "p2": "Esteticista titulada con años de experiencia, creó The Arc como el lugar que siempre quiso que existiera — sin prisas, profundamente personal y dedicado a resultados reales. Cada ritual lleva su sello.",
+    "quote": "Tu glow es mi oficio.",
+    "cta": "Reserva con Patricia"
+  },
   "footer": {
     "tagline": "Realza tu glow. Descubre tu belleza.",
     "explore": "Explorar",
@@ -137,7 +147,7 @@
     "summary": "Resumen del pedido",
     "pay": "Pagar de forma segura",
     "unavailableTitle": "El pago seguro se está finalizando",
-    "unavailableBody": "Los pagos se activan en cuanto se conecte Stripe. Mientras tanto, reserva por teléfono y nos encargamos de todo.",
+    "unavailableBody": "Los pagos se activan en cuanto se conecte Square. Mientras tanto, reserva por teléfono y nos encargamos de todo.",
     "back": "Volver a la tienda",
     "emptyTitle": "Aún no hay nada aquí",
     "emptyBody": "Añade un tratamiento o producto para empezar."

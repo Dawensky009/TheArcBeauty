@@ -15,7 +15,6 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const explore = [
     { href: `/${locale}/treatments`, label: dict.nav.treatments },
     { href: `/${locale}/shop`, label: dict.nav.shop },
-    { href: `/${locale}/gift-cards`, label: dict.nav.giftCards },
     { href: `/${locale}/maison`, label: dict.nav.maison },
     { href: `/${locale}/book`, label: dict.nav.book },
   ];

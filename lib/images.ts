@@ -7,8 +7,9 @@ function img(id: string, w = 1200): string {
   return `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
 }
 
-// Hero — full-bleed editorial image (Full HD)
-export const HERO_FULL = img("1699206791200-414d95e68450", 1920);
+// Hero — full-bleed editorial image (Full HD). Black-woman beauty / self-care
+// portrait in warm bronze tones (matches the palette). Unsplash, verified 200.
+export const HERO_FULL = img("1618509682637-e4790939cf96", 1920);
 
 // Hero — vivid, full-colour beauty slideshow (saturation-picked)
 export const HERO_SLIDES: string[] = [
@@ -28,6 +29,9 @@ export const SERVICE_IMAGES: Record<string, string> = {
 
 // Maison / about
 export const MAISON_IMAGE = img("1600334129128-685c5582fd35");
+
+// Founder — Patricia, owner. Warm professional portrait (Unsplash, verified 200).
+export const FOUNDER_IMAGE = img("1611432579402-7037e3e2c1e4", 1100);
 
 // Editorial gallery
 export const GALLERY_IMAGES: string[] = [

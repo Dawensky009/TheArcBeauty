@@ -107,7 +107,7 @@ export function CheckoutClient({
               {loading ? "…" : c.pay}
             </Button>
             <p className="mt-4 flex items-center justify-center gap-1.5 text-xs text-stone-light">
-              <Lock size={11} /> Stripe · 256-bit SSL
+              <Lock size={11} /> Square · secure checkout
             </p>
           </>
         )}
